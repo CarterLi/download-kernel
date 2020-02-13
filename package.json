@@ -1,0 +1,13 @@
+{
+  "name": "download-kernel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jsdom": "^12.2.4",
+    "@types/node": "^13.7.1"
+  },
+  "dependencies": {
+    "jsdom": "^16.1.0"
+  }
+}
