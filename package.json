@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "node ."
+  },
   "devDependencies": {
-    "@types/jsdom": "^12.2.4",
-    "@types/node": "^13.7.1"
+    "@types/jsdom": "^16.1.0",
+    "@types/node": "^13.7.4"
   },
   "dependencies": {
-    "jsdom": "^16.1.0"
+    "jsdom": "^16.2.0"
   }
 }
