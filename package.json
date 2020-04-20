@@ -7,10 +7,10 @@
     "start": "node ."
   },
   "devDependencies": {
-    "@types/jsdom": "^16.1.0",
-    "@types/node": "^13.7.4"
+    "@types/jsdom": "^16.2.1",
+    "@types/node": "^13.13.0"
   },
   "dependencies": {
-    "jsdom": "^16.2.0"
+    "jsdom": "^16.2.2"
   }
 }
