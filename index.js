@@ -6,8 +6,8 @@ void async function main() {
     const { document } = dom.window;
     console.log(document.querySelector('h1').textContent, '\n');
     const files = [];
-    let a = dom.window.document.querySelector('a[href="BUILD.LOG.amd64"]');
-    while (!(a = a.nextElementSibling).matches('a[href="BUILD.LOG.arm64"]')) {
+    let a = dom.window.document.querySelector('a[href="amd64/log"]');
+    while (!(a = a.nextElementSibling).matches('a[href="amd64/self-tests/log"]')) {
         if (/[^a-z](all|generic)[^a-z]/.test(a.textContent)) {
             files.push(a.href);
         }
