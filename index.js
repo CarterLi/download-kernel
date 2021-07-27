@@ -1,10 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const jsdom_1 = require("jsdom");
-void async function main() {
-    const dom = await jsdom_1.JSDOM.fromURL('https://kernel.ubuntu.com/~kernel-ppa/mainline/daily/current/');
+void async function main(version) {
+    if (version === 'help') {
+        console.info(`Usage: npm start [version]`);
+        return;
+    }
+    const dom = await jsdom_1.JSDOM.fromURL(`https://kernel.ubuntu.com/~kernel-ppa/mainline/${/^v\d+\.\d+/.test(version) ? encodeURIComponent(version) : 'daily/current'}/`);
     const { document } = dom.window;
-    console.log(document.querySelector('h1').textContent, '\n');
+    console.info(document.querySelector('h1').textContent, '\n');
     const files = [];
     let a = dom.window.document.querySelector('a[href="amd64/log"]');
     while (!(a = a.nextElementSibling).matches('a[href="amd64/self-tests/log"]')) {
@@ -13,5 +17,5 @@ void async function main() {
         }
     }
     console.log(`wget ${files.join(' ')}`);
-}().catch(console.error.bind(console));
+}(process.argv[process.argv.length - 1]).catch(console.error);
 //# sourceMappingURL=index.js.map
