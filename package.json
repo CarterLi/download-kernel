@@ -9,10 +9,10 @@
   },
   "devDependencies": {
     "@types/jsdom": "^16.2.13",
-    "@types/node": "^16.4.3"
+    "@types/node": "^16.11.6"
   },
   "dependencies": {
-    "jsdom": "^16.6.0",
-    "typescript": "^4.3.5"
+    "jsdom": "^18.0.1",
+    "typescript": "^4.4.4"
   }
 }
